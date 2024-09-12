@@ -2,15 +2,19 @@
 
 
 :root {
-    --main-area: #8ECAE6;
+    --main-area: #f7f7f0 ;
     --nav-area: #023047;
-    --buttons-colour: #FB8500;
-    --footer: #219EBC;
+    --buttons-colour: #046a97;
+    --lighter-buttons: #2988ad;
+    --footer-text: #fefa2f ;
     --main-text: #023047;
     --additional-text: #219EBC;
-    --highlights: #FFB703;
+    --titles: #fec734;
+    --article-background: #2e2e2e;
 
 }
+
+
 @font-face {
     font-family: 'Lato';
     src: url(/src/assets/fonts/Lato-Regular.woff2) format("woof2");
@@ -83,3 +87,6 @@ nav .navbar .navbar-expand-md .bg-body-tertiary {
     font-family: 'Playfair Display';
     font-weight: 300;
 }
+
+/* Top Video Styles*/
+
