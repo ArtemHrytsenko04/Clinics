@@ -1,0 +1,92 @@
+
+
+
+:root {
+    --main-area: #f7f7f0 ;
+    --nav-area: #023047;
+    --buttons-colour: #046a97;
+    --lighter-buttons: #2988ad;
+    --footer-text: #fefa2f ;
+    --main-text: #023047;
+    --additional-text: #219EBC;
+    --titles: #fec734;
+    --article-background: #2e2e2e;
+
+}
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url(/src/assets/fonts/Lato-Regular.woff2) format("woof2");
+    src: url(/src/assets/fonts/Lato-Regular.woff) format("woof");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Declaring fonts for the text*/
+@font-face {
+    font-family: 'Lato';
+    src: url(/src/assets/fonts/Lato-Bold.woff2) format("woof2");
+    src: url(/src/assets/fonts/Lato-Bold.woff) format("woof");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*Declaring fonts for the headings*/
+@font-face {
+    font-family: "Playfair";
+    src: url(/src/assets/fonts/PlayfairDisplay-Regular.woff2) format("woof2");
+    src: url(/src/assets/fonts/PlayfairDisplay-Regular.woff) format("woof");
+    font-weight: 700;
+}
+
+
+/*Fonts example, adjust whilst have a text*/
+
+body {
+    background-color: #8ECAE6;
+}
+body p{
+    font-family: "Lato", serif;
+}
+
+body h1{
+    font-family: "Playfair", serif;
+    font-weight: 700;
+}
+
+main .photo-section-main {
+    background: var(--main-area);
+}
+
+.photo-section-main .img-fluid {
+    height: 60vh;
+    width:max-content; 
+}
+
+nav .navbar .navbar-expand-md .bg-body-tertiary {
+    background-color: #023047;
+}
+
+.img-section img {
+    height: 100vh;
+    width: 1000px;
+}
+
+.info-section .info-section-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.info-section p {
+    font-family: 'Lato', serif;
+    font-weight: 400;
+}
+
+.info-section h4 {
+    font-family: 'Playfair Display';
+    font-weight: 300;
+}
+
+/* Top Video Styles*/
+
