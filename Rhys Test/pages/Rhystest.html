@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infusion Clinic</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .accordion {
+            border: 1px solid #E5C067;
+            border-radius: 5px;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-top: 1px solid #E5C067;
+        }
+
+        .accordion-item:first-child {
+            border-top: none;
+        }
+
+        .accordion-header {
+            background: #EDF4f2;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #7C8363;
+        }
+
+        .accordion-content {
+            padding: 0 15px;
+            /* Padding adjusted */
+            max-height: 0;
+            /* Start closed */
+            overflow: hidden;
+            background: #EDF4f2;
+            transition: max-height 500ms ease;
+            /* Animation for height */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .accordion-content.open {
+            max-height: 1000px;
+            /* Adjust based on content */
+            padding: 15px;
+            /* Add padding when open */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .accordion-image {
+            width: 30vw;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <!-- Video background -->
+        <div class="video-background">
+            <video autoplay muted loop id="topvideo"
+                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+                <source src="../assets/Images/medium-version.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <nav style="background-color: #EDF4F2; width: 100%;">
+                <div class="container" style="position: relative; z-index: 1; text-align: center;">
+                    <a href="#" class="navbar-brand">
+                        <img class="logo" src="/assets/Images/Page_title.png" alt="logo"
+                            style="height: 10vh; margin-top: 10px; margin-bottom: 10px;">
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div style="position: relative; z-index: 1;"></div>
+        <div style="background-color: #EDF4F2; padding: 20px; width: 100%; box-sizing: border-box;">
+            <div
+                style="background-color: #7C8363; padding: 10px; min-height: 30vh; box-sizing: border-box; border-radius: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
+                    <!-- Left side content -->
+                    <div style="width: 50%; display: flex; flex-direction: column;">
+                        <img src="/assets/Images/stocknurse.webp" style="width: 70%;">
+                        <button id="scroll-button"
+                            style="background-color: #E5C067; margin-top: 10px; padding: 10px; width: 100px; border-radius: 10px;">Explore</button>
+                    </div>
+                    <!-- Right side content with logo -->
+                    <div style="width: 50%; position: relative;">
+                        <h1 style="color: #D49A56;">About Us</h1>
+                        <h3 style="color: #E5C067;">Our Mission and Vision</h3>
+                        <p style="color: #EDF4F2; z-index: 2; position:absolute">Praesent efficitur nisi mauris, a
+                            semper eros porttitor mattis.
+                            Mauris eleifend non odio sed euismod. Nulla et sem ipsum. Nulla viverra, mi vel ullamcorper
+                            accumsan,
+                            massa dui faucibus metus, vel maximus massa magna quis mi. Etiam sollicitudin euismod leo.
+                            Pellentesque ac nibh velit. Ut eu lectus rhoncus, laoreet felis quis, tristique dolor.
+                            Aliquam
+                            placerat risus enim, ac tincidunt mauris venenatis et. Etiam vestibulum massa quis ex
+                            blandit
+                            condimentum. Integer scelerisque arcu turpis, sit amet maximus sapien dapibus vitae. Proin
+                            lacus
+                            tellus, molestie vel rutrum ultrices, lacinia non nulla. In ac dignissim mi, a bibendum ex.
+                            Donec
+                            luctus nisl orci, in dapibus nibh dapibus quis. Nam semper congue mi vitae aliquet. Sed
+                            aliquet ipsum
+                            eu suscipit interdum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content on top of the video -->
+        <div style="position: relative; z-index: 1;"></div>
+        <div style="background-color: #EDF4F2; padding: 20px; width: 100%; box-sizing: border-box;">
+            <div
+                style="background-color: #edf4f231; padding: 20px; min-height: 30vh; box-sizing: border-box; border-radius: 20px; z-index: 1;">
+                <div style="display: flex; justify-content: flex-end; padding: 30px;">
+                    <div style="text-align: right; position: relative;">
+                        <h1 style="color: #E5C067;">We are Southern Cross Accredited</h1>
+                        <img src="/assets/Images/scrosslogo.png" style="width: 50%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="min-height: 75vh;">
+
+        </div>
+
+
+        <div style="position: relative; z-index: 1;" id="target-section">
+            <div style="background-color: #EDF4F2; padding: 20px; width: 100%; box-sizing: border-box;">
+                <div style="background-color: #7C8363; padding: 20px; min-height: 30vh; box-sizing: border-box; border-radius: 20px;">
+                    <h1 style="color: #D49A56;">Frequently Asked Questions</h1>
+                    <style>
+                        .accordion-button {
+                            background-color: #EDF4f2;
+                            color: #7C8363;
+                            font-size: 1.2em;
+                        }
+
+                        .accordion-body {
+                            display: flex;
+                            flex-direction: row;
+                        }
+
+                        .accordion-image {
+                            width: 30vw;
+                            margin: 20px;
+                        }
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is Iron Deficiency Anaemia?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <p>
+                                                This is a condition caused by a lack of red blood cells or
+                                                haemoglobin.<br><br>
+                                                The most common reason for developing anaemia is not having enough iron.
+                                                <br><br>
+                                                Haemoglobin is a protein found in red blood cells. It traps oxygen from
+                                                the
+                                                lungs and carries it
+                                                around the body. <br>A key ingredient used to make haemoglobin is iron.
+                                                If
+                                                there
+                                                isn’t enough iron
+                                                stored in the body, then the amount of haemoglobin drops. <br>When
+                                                haemoglobin
+                                                reaches a low level,
+                                                less oxygen can be carried in the blood. <br><br>
+                                                This can cause symptoms such as:
+                                            </p>
+                                            <ul>
+                                                <li>tiredness</li>
+                                                <li>breathlessness</li>
+                                                <li>heart palpitations</li>
+                                                <li>weakness</li>
+                                                <li>headache</li>
+                                                <li>dizziness</li>
+                                                <li>chest pain</li>
+                                                <li>irritability</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Why do I have a deficiency?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+
+                                        <div>
+                                            <p>
+                                                There are several reason why you might not have enough iron in your
+                                                body:
+                                            </p>
+                                            <ul>
+                                                <li>there might not be enough iron in your diet</li>
+                                                <li>your gut may not absorb enough iron from your food (even if you have
+                                                    an
+                                                    iron-rich diet)</li>
+                                                <li>your iron requirements might be so high that you can’t get enough
+                                                    from your
+                                                    diet (your baby
+                                                    needs a lot of extra iron when it’s growing in the womb. <br>It gets
+                                                    the
+                                                    iron
+                                                    from you, which
+                                                    means
+                                                    that your own iron stores can become lower)</li>
+                                                <li>you may lose iron through bleeding, such as by having heavy periods
+                                                    before
+                                                    pregnancy, or
+                                                    because
+                                                    you have another medical condition.</li>
+                                            </ul>
+                                            <p>
+                                                It is possible to have more than one of these causes, especially during
+                                                pregnancy. <br><br>
+                                                In fact, over 20% of pregnant women in Europe are anaemic during
+                                                pregnancy!<br><br>
+                                                As anaemia is so common during pregnancy, all women in the UK are
+                                                screened for
+                                                anaemia at their
+                                                booking visit and at 28 weeks of pregnancy.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How is it diagnosed?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <p>
+                                                Anaemia can be detected by a simple blood test. <br><br>
+                                                As anaemia is so common in pregnancy, your GP will routinely check your
+                                                haemoglobin levels.
+                                                <br><br>
+                                                All pregnant women are screened for anaemia at their first booking visit
+                                                and at
+                                                28 weeks of
+                                                pregnancy. <br><br>
+                                                If you are at an increased risk of anaemia, you may be screened more
+                                                frequently.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How is anaemia treated?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+
+                                        <div>
+                                            <p>
+                                                <strong>Diet</strong><br><br>
+                                                A good balanced diet is vital to make sure you receive enough iron. <br>
+                                                The most easily absorbed iron comes from red meat, fish and poultry.
+                                                However,
+                                                other vegetarian
+                                                options exist, including lentis, fortified cereals and green leafy
+                                                vegetables,
+                                                such as spinach.
+                                                <br><br>
+                                                Vitamin C can help your body to absorb iron from food; this is found in
+                                                orange
+                                                juice and other
+                                                fruits and vegetables. <br><br>
+                                                Some foods can reduce your ability to absorb iron, so should be avoided
+                                                around
+                                                the time you eat
+                                                iron-rich foods and/or take your iron tablets. These include tea, coffee
+                                                and
+                                                foods containing
+                                                calcium, such as milk and other dairy products and alternatives, some
+                                                seeds,
+                                                pulses and
+                                                vegetables,
+                                                and many multi-vitamin tablets. <br><br>
+                                                <strong>Iron Tablets</strong> <br><br>
+                                                Oral iron tablets are very effective at replacing the iron needed for
+                                                haemoglobin levels to
+                                                rise.
+                                                Some iron tablets can also come with folic acid and Vitamin C, which
+                                                helps with
+                                                the absorption
+                                                of
+                                                iron from the gut. <br><br>
+                                                The recommended tablets for treating iron deficiency anaemia are ferrous
+                                                sulphate tablets. How
+                                                well
+                                                these iron tablets work is greatly affected by how they are taken. The
+                                                best way
+                                                to maximise
+                                                their
+                                                effectiveness is to take a tablet with orange juice one hour before
+                                                meals. Of
+                                                you don’t drink
+                                                orange
+                                                juice, then another drink containing Vitamin C will also work. Your
+                                                midwife or
+                                                doctor will be
+                                                able
+                                                to advise you on alternative drinks. <br><br>
+                                                Your GP or midwife will give you further guidance on how many iron
+                                                tablets to
+                                                take per day.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        What is Ferinject?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <p>
+                                                <strong>What FERINJECT is given for:</strong><br><br>
+                                                FERINJECT is given for the treatment of patients with iron deficiency,
+                                                when oral
+                                                iron
+                                                preparations
+                                                are ineffective or cannot be used. The aim of the therapy is to
+                                                replenish the
+                                                body iron stores
+                                                and
+                                                to remedy anaemia, a reduced level of haemoglobin due to iron
+                                                deficiency. It is
+                                                also used when
+                                                there
+                                                is a clinical need to deliver iron rapidly.<br><br>
+                                                Before administration, your doctor will perform a blood test to
+                                                calculate the
+                                                dose of FERINJECT
+                                                you
+                                                require.<br><br>
+                                                <strong>Before you are given FERINJECT</strong><br><br>
+                                                When you must not be given FERINJECT:<br>
+                                                - If you are hypersensitive (allergic) to ferric carboxymaltose or any
+                                                of the
+                                                other ingredients
+                                                in
+                                                FERINJECT,<br>
+                                                - If you have anaemia <strong>not</strong> caused by iron
+                                                deficiency,<br>
+                                                - If you have iron overload (too much iron in your body) or disturbances
+                                                in
+                                                utilization of
+                                                iron.<br><br>
+                                                <strong>You must tell your doctor if:</strong><br><br>
+                                                - If you are under the age of 14 years, <br>
+                                                - You have an infection, asthma, eczemas, allergies or liver
+                                                disorders.<br>
+                                                - You are pregnant or breastfeeding.<br>
+                                                - If you have or have had low levels of phosphate in the blood. <br><br>
+                                                <strong>You should be aware that:</strong><br><br>
+                                                Intravenous iron preparations can cause severe allergic reactions. These
+                                                allergic reactions may
+                                                include chest pain. Tell your doctor immediately if you experience
+                                                it.<br><br>
+                                                <strong>How FERINJECT is given</strong><br><br>
+                                                Your doctor can administer FERINJECT by three possible routes: <br>
+                                                Undiluted by injection, <br>
+                                                During haemodialyis, <br>
+                                                Or diluted by infusion. <br><br>
+                                                By injection, you may receive up to 20 mL of FERINJECT, corresponding to
+                                                1000mg
+                                                of iron, once a
+                                                week
+                                                directly into the vein. <br><br>
+                                                Your doctorwill take responsibility for determining the appropriate dose
+                                                and
+                                                choosing the
+                                                method,
+                                                frequency, and duration of your treatment. <br>
+                                                You may be re-assessed after 4 weeks to determine whether you need more
+                                                FERINJECT injections.
+                                                <br>
+                                                FERINJECT will be administered in a setting where possible allergic
+                                                reactions
+                                                can receive
+                                                appropriate and prompt treatment. <br><br>
+                                                You will be observed for about 30 minutes by your doctor or nurse after
+                                                each
+                                                administration.
+                                                <br><br>
+                                                <strong>Possible Unwated Effects</strong><br><br>
+                                                Like all medicines, FERINJECT can cause unwanted effects, although not
+                                                everybody
+                                                gets them. <br>
+                                                Clinical studies experience reported sude effects are either common
+                                                (occurring
+                                                in less than 1 in
+                                                10
+                                                and more than 1 in 100 patients) or uncommon (occurring in less than 1
+                                                in 100
+                                                and more than 1 in
+                                                1000 patients). <br>
+                                                The following symptoms were common:<br>
+                                                - Headache<br>
+                                                - Dizziness<br>
+                                                - High blood pressure<br>
+                                                - Nausea<br>
+                                                - Injection/infusion site reactions<br>
+                                                - Low blood phosphate levels.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.querySelectorAll('.accordion-header').forEach(header => {
+                                header.addEventListener('click', function () {
+                                    const content = this.nextElementSibling;
+                                    content.classList.toggle('open'); // Toggle class for animation
+                                });
+                            });
+                        </script>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: relative; z-index: 1;">
+            <div style="background-color: #EDF4F2; padding: 20px; width: 100%; box-sizing: border-box;">
+                <div style="background-color: #7C8363; padding: 20px; min-height: 30vh; box-sizing: border-box; border-radius: 20px;">
+                    <h1 style="color: #D49A56;">Our Processes</h1>
+                    <h3 style="color: #E5C067;">Pricing</h3>
+                    <p style="color: #EDF4F2;">Iron Infusions (Ferinject) are available to treat iron deficiency
+                        anaemia.<br>Please check your eligibility with your GP.<br><br>
+                        Casual Patient Fee: Administration $275 + Medication Charge
+                    </p>
+                    <h3 style="color: #E5C067;">Our Referral Process:</h3>
+                    <ol style="color: #EDF4F2;">
+                        <li>The referral form, along with blood test results, is received by Rere Ora.</li>
+                        <li>A Registered Nurse contacts the patient to schedule an appointment.</li>
+                        <li>The patient picks up their prescribed Ferinject script before the consultation.</li>
+                        <li>The patient brings their Ferinject prescription to the scheduled appointment.</li>
+                        <li>Upon arrival, the patient signs a consent form and reviews the Ferinject patient information
+                            sheet.</li>
+                        <li>The Registered Nurse explains the procedure, discusses potential side effects, and advises a
+                            20-minute observation period after administration.</li>
+                        <li>The Registered Nurse verifies the 5 rights and administers the medication while closely
+                            monitoring the patient.</li>
+                    </ol>
+                    <h3 style="color: #E5C067;">Our referral form</h3>
+                    <a href="https://drive.google.com/file/d/19GzR6DPNH6NYFDvmpehOezRlKfJOdh9S/view?usp=drive_link"
+                        target="_blank" style="color: #D49A56;">Download PDF</a>
+                    <p style="color: #EDF4F2;">Please download this form by clicking the download button: <img
+                            src="/assets/Images/dlbutton.png"></p>
+                    <p style="color: #EDF4F2;">After downloading our referral form, simply print the form and take it to
+                        your GP to be completed.<br>
+                        Your GP will complete the form, and send it on your behalf to us.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: relative; z-index: 1;">
+            <div style="background-color: #EDF4F2; padding: 20px; width: 100%; box-sizing: border-box;">
+                <div style="background-color: #7C8363; padding: 20px; min-height: 30vh; box-sizing: border-box; border-radius: 20px;">
+                    <h1 style="color: #D49A56;">Contact us</h1>
+                    <h3 style="color: #E5C067;">It's easier than ever to get in touch.</h3>
+                    <p style="color: #EDF4F2;">Email: <br>infusion@rereoraclinic.co.nz<br><br>Phone: <br>021 799
+                        832<br><br>Address: <br>117 Maraekakaho Road<br>
+                        Camberley<br>
+                        Hastings<br>
+                        4120</p>
+                    <h3 style="color: #E5C067;">Opening hours:</h3>
+                    <p style="color: #EDF4F2;">9am-2pm Monday-Wednesday.</p>
+                    <p style="color: #EDF4F2;">(This is subject to change during busier seasons)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat content as needed -->
+        </div>
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+    document.getElementById("scroll-button").addEventListener("click", function () {
+        slowScroll(document.getElementById("target-section"), 20); // 2000 ms (2 seconds) duration
+    });
+
+    function slowScroll(target, duration) {
+        const targetPosition = target.getBoundingClientRect().top;
+        const startPosition = window.pageYOffset;
+        const startTime = performance.now();
+
+        function animation(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+</script>
+
+</html>
