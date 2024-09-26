@@ -1,0 +1,339 @@
+:root {
+    --flavour-color: #7C8363;
+    --title-color: #D49A56;
+    --flavour-text-color: #E5C067;
+    --general-text: #EDF4F2;
+    --button-background: #e86306;
+    --button-text-background: #e4a502;
+
+    --additional-background-color: #591b55;
+}
+
+/*Fonts example, adjust whilst have a text*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles */
+
+.navbar-custom {
+    background: #464a3b;
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Lucida', sans-serif;
+    font-weight: 600;
+    color: #bdaa8e !important; 
+    font-size: 19px;
+}
+
+/* Main Area */
+
+.main {
+    background-color:#464a3b; 
+
+}
+
+/*Top Heading Styles*/
+.heading-top {
+    font-family: 'Lucida', sans-serif;
+    color: #bfac8f;
+    font-weight: 600;
+    font-size: 76px;
+}
+
+.main-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+/* Explore Button On top*/ 
+.explore-button {
+    opacity: 1;
+    color: #bda98c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    border-style: solid;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid;
+    transition: color 0.2s ease, opacity 0.3 ease;
+}
+
+.explore-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #BEAB8E4D;    
+    border: 2px solid;
+    opacity: 0.8;
+}
+
+/*Southern Cross Paragraph*/
+.southerncross {
+    background-color: #EDF4F2  ;
+}
+
+.southerncross-heading-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #E5C067;
+    padding-top: 30px;
+}
+
+
+/*Sothern Cross Heading*/
+.main-heading {
+    font-family: 'Playfair Display', serif;
+    color: #021a4f;
+}
+
+
+/*FAQ Section Styles*/ 
+
+.faq-section {
+    background-color: #f2f8fc;
+}
+
+.heading-faq {
+    font-family: 'Playfair Display', serif;
+    color: #021a4f;    
+}
+
+.card {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #f1f1f1;
+    width: 18rem;
+    margin-bottom: 10px;
+}
+
+.card-row {
+    margin: 0px -5px;
+    padding-top: 25px;
+}
+
+.card-row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-column {
+    float: left;
+    padding: 0 10px;
+}
+
+.card-title {
+    color: #021a4f;
+}
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+
+}
+
+
+/*Prices Section*/
+
+.referral-section {
+    background-color: #03246b;
+}
+
+.reference-heading {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+}
+
+.reference-text {
+    color: #edf0ff;
+}
+
+.card-service {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #ffffff;
+    width: 18rem;
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    color: #8793ab;
+    border-style: solid;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid;
+    transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+    background: #EDF4FF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #03246b;    
+    border: 2px solid;
+    opacity: 1;
+    background-color: #EDF4FF;
+
+}
+
+/* Testimonials  */
+
+.review-text {
+    font-family: "Lato", sans-serif;
+}
+
+.review-img {
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+}
+
+.review {
+  background: #f2f8fc;
+}
+
+.review-heading {
+    color: #021a4f;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* Contact Us */
+
+.contact {
+    background: #021a4f;
+}
+
+.contact-heading {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+}
+
+.contact-text {
+    color: #ffffff;   
+}
+
+.icon-circle {
+    display: flex;
+    align-items: row;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #bfac8f;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* contact us form */
+
+.form-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 38px;
+    color: #021a4f;
+}
+
+.form-container {
+    background: #f2f8fc;
+}
+
+.form-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+.submit-btn {
+    border-radius: 15px;
+    background-color: #0753f5;
+    color: white;
+    font-family: "Lato", sans-serif;
+    padding: 15px;
+    margin: 15px;
+    font-size: 16px;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.submit-btn:hover {
+    background-color: #043eb7;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+
+/* Location Styles */
+
+.location {
+    background-color: #f1f1f1;
+}
+
+.location-heading {
+    font-family: 'Playfair Display', sans-serif;
+    color: #021a4f;
+}
+
+.location-text {
+    color: #021a4f;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px; 
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #03246b;
+}
+
+.footer-company-n {
+    color: #9dbbfc;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.footer-text {
+    color: #b8c7d9;
+    font-family: 'Lato', sans-serif;
+}
+
+/*Media Queries  for video*/ 
+
+@media screen and (max-width: 680px) {
+    .card-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
