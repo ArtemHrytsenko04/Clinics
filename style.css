@@ -13,7 +13,13 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
+
+
+    
+
+
 
 /* Header Styles */
 
@@ -22,7 +28,6 @@
 }
 
 .navbar-brand, .nav-link {
-    font-family: 'Lucida', sans-serif;
     font-weight: 600;
     color: #bdaa8e !important; 
     font-size: 19px;
@@ -37,14 +42,12 @@
 
 /*Top Heading Styles*/
 .heading-top {
-    font-family: 'Lucida', sans-serif;
     color: #bfac8f;
     font-weight: 600;
     font-size: 76px;
 }
 
 .main-text {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 32px;
 }
@@ -53,7 +56,6 @@
 .explore-button {
     opacity: 1;
     color: #bda98c;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 21px;
     border-style: solid;
@@ -74,11 +76,10 @@
 
 /*Southern Cross Paragraph*/
 .southerncross {
-    background-color: #EDF4F2  ;
+    background-color: #EDF4f2;
 }
 
 .southerncross-heading-text {
-    font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 600;
     color: #E5C067;
@@ -88,7 +89,6 @@
 
 /*Sothern Cross Heading*/
 .main-heading {
-    font-family: 'Playfair Display', serif;
     color: #021a4f;
 }
 
@@ -100,7 +100,6 @@
 }
 
 .heading-faq {
-    font-family: 'Playfair Display', serif;
     color: #021a4f;    
 }
 
@@ -138,7 +137,6 @@
 }
 
 .card-text {
-    font-family: 'Lato', sans-serif;
     font-size: 16px;
 
 }
@@ -151,7 +149,6 @@
 }
 
 .reference-heading {
-    font-family: 'Playfair Display', serif;
     color: #ffffff;
 }
 
@@ -195,10 +192,6 @@
 
 /* Testimonials  */
 
-.review-text {
-    font-family: "Lato", sans-serif;
-}
-
 .review-img {
     object-fit: cover;
     height: 80px;
@@ -206,23 +199,21 @@
 }
 
 .review {
-  background: #f2f8fc;
+  background: #EDF4f2;
 }
 
 .review-heading {
     color: #021a4f;
-    font-family: 'Playfair Display', serif;
 }
 
 
 /* Contact Us */
 
 .contact {
-    background: #021a4f;
+    background: #464a3b;
 }
 
 .contact-heading {
-    font-family: 'Playfair Display', serif;
     color: #ffffff;
 }
 
@@ -246,7 +237,6 @@
 /* contact us form */
 
 .form-heading {
-    font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-size: 38px;
     color: #021a4f;
@@ -257,7 +247,6 @@
 }
 
 .form-label {
-    font-family: 'Lato', sans-serif;
     font-size: 14px;
 }
 
@@ -269,7 +258,6 @@
     border-radius: 15px;
     background-color: #0753f5;
     color: white;
-    font-family: "Lato", sans-serif;
     padding: 15px;
     margin: 15px;
     font-size: 16px;
@@ -293,7 +281,6 @@
 }
 
 .location-heading {
-    font-family: 'Playfair Display', sans-serif;
     color: #021a4f;
 }
 
@@ -314,19 +301,147 @@
 /* Footer Styles */
 
 footer {
-    background-color: #03246b;
+    background-color: #EDF4f2;
+    min-height: 20vh;
 }
 
 .footer-company-n {
     color: #9dbbfc;
-    font-family: 'Playfair Display', serif;
     font-weight: 500;
 }
 
 .footer-text {
     color: #b8c7d9;
-    font-family: 'Lato', sans-serif;
 }
+
+
+
+
+.accordion {
+    border: 1px solid #E5C067;
+    border-radius: 5px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-top: 1px solid #E5C067;
+}
+
+.accordion-item:first-child {
+    border-top: none;
+}
+
+.accordion-header {
+    background: #EDF4f2;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #464a3b;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    /* Padding adjusted */
+    max-height: 0;
+    /* Start closed */
+    overflow: hidden;
+    background: #EDF4f2;
+    transition: max-height 500ms ease;
+    /* Animation for height */
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-content.open {
+    max-height: 1000px;
+    /* Adjust based on content */
+    padding: 15px;
+    /* Add padding when open */
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-image {
+    width: 30vw;
+    margin: 20px;
+}
+
+.faq-section {
+    background-color: #464a3b;
+    padding: 20px;
+    min-height: 30vh;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.heading-faq {
+    color: #021a4f;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #EDF4f2;
+    width: 18rem;
+    margin-bottom: 10px;
+    color: #464a3b;;
+    height: 45vh;
+}
+
+.card-row {
+    margin: 0px -5px;
+    padding-top: 25px;
+}
+
+.card-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-column {
+    float: left;
+    padding: 0 10px;
+}
+
+.card-title {
+    color: #021a4f;
+}
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    font-size: 16px;
+
+}
+
+@media screen and (max-width: 680px) {
+    .card-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Media Queries  for video*/ 
 
