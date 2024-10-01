@@ -1,0 +1,492 @@
+:root {
+    --flavour-color: #7C8363;
+    --title-color: #D49A56;
+    --flavour-text-color: #E5C067;
+    --general-text: #EDF4F2;
+    --button-background: #e86306;
+    --button-text-background: #e4a502;
+
+    --additional-background-color: #591b55;
+}
+
+/*Fonts example, adjust whilst have a text*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element is in view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for each card */
+.fade-in.card-1 {
+    transition-delay: 0.3s;
+}
+
+.fade-in.card-2 {
+    transition-delay: 0.6s;
+}
+
+.fade-in.card-3 {
+    transition-delay: 0.9s;
+}
+
+.fade-in.card-4 {
+    transition-delay: 1.2s;
+}
+
+.fade-in.card-5 {
+    transition-delay: 1.5s;
+}
+
+.fade-in.card-6 {
+    transition-delay: 1.8s;
+}
+
+
+    
+
+
+
+/* Header Styles */
+
+.navbar-custom {
+    background: #464a3b;
+}
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+    color: #bdaa8e !important; 
+    font-size: 19px;
+}
+
+/* Main Area */
+
+.main {
+    background-color:#464a3b; 
+
+}
+
+/*Top Heading Styles*/
+.heading-top {
+    color: #bfac8f;
+    font-weight: 600;
+    font-size: 76px;
+}
+
+.main-text {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+/* Explore Button On top*/ 
+.explore-button {
+    opacity: 1;
+    color: #bda98c;
+    font-weight: 600;
+    font-size: 21px;
+    border-style: solid;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid;
+    transition: color 0.2s ease, opacity 0.3 ease;
+}
+
+.explore-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #BEAB8E4D;    
+    border: 2px solid;
+    opacity: 0.8;
+}
+
+/*Southern Cross Paragraph*/
+.southerncross {
+    background-color: #EDF4f2;
+}
+
+.southerncross-heading-text {
+    font-size: 32px;
+    font-weight: 600;
+    color: #E5C067;
+    padding-top: 30px;
+}
+
+
+/*Sothern Cross Heading*/
+.main-heading {
+    color: #021a4f;
+}
+
+
+/*FAQ Section Styles*/ 
+
+.faq-section {
+    background-color: #f2f8fc;
+}
+
+.heading-faq {
+    color: #021a4f;    
+}
+
+.card {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #f1f1f1;
+    width: 18rem;
+    margin-bottom: 10px;
+}
+
+.card-row {
+    margin: 0px -5px;
+    padding-top: 25px;
+}
+
+.card-row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-column {
+    float: left;
+    padding: 0 10px;
+}
+
+.card-title {
+    color: #021a4f;
+}
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    font-size: 16px;
+
+}
+
+
+/*Prices Section*/
+
+.referral-section {
+    background-color: #03246b;
+}
+
+.reference-heading {
+    color: #ffffff;
+}
+
+.reference-text {
+    color: #edf0ff;
+}
+
+.card-service {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #ffffff;
+    width: 18rem;
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    color: #8793ab;
+    border-style: solid;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid;
+    transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+    background: #EDF4FF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #03246b;    
+    border: 2px solid;
+    opacity: 1;
+    background-color: #EDF4FF;
+
+}
+
+/* Testimonials  */
+
+.review-img {
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+}
+
+.review {
+  background: #EDF4f2;
+}
+
+.review-heading {
+    color: #021a4f;
+}
+
+
+/* Contact Us */
+
+.contact {
+    background: #464a3b;
+}
+
+.contact-heading {
+    color: #ffffff;
+}
+
+.contact-text {
+    color: #ffffff;   
+}
+
+.icon-circle {
+    display: flex;
+    align-items: row;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #bfac8f;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* contact us form */
+
+.form-heading {
+    font-weight: 500;
+    font-size: 38px;
+    color: #021a4f;
+}
+
+.form-container {
+    background: #f2f8fc;
+}
+
+.form-label {
+    font-size: 14px;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+.submit-btn {
+    border-radius: 15px;
+    background-color: #0753f5;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+    font-size: 16px;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.submit-btn:hover {
+    background-color: #043eb7;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+
+/* Location Styles */
+
+.location {
+    background-color: #f1f1f1;
+}
+
+.location-heading {
+    color: #021a4f;
+}
+
+.location-text {
+    color: #021a4f;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px; 
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #EDF4f2;
+    min-height: 20vh;
+}
+
+.footer-company-n {
+    color: #9dbbfc;
+    font-weight: 500;
+}
+
+.footer-text {
+    color: #b8c7d9;
+}
+
+
+
+
+.accordion {
+    border: 1px solid #E5C067;
+    border-radius: 5px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-top: 1px solid #E5C067;
+}
+
+.accordion-item:first-child {
+    border-top: none;
+}
+
+.accordion-header {
+    background: #EDF4f2;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #464a3b;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    /* Padding adjusted */
+    max-height: 0;
+    /* Start closed */
+    overflow: hidden;
+    background: #EDF4f2;
+    transition: max-height 500ms ease;
+    /* Animation for height */
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-content.open {
+    max-height: 1000px;
+    /* Adjust based on content */
+    padding: 15px;
+    /* Add padding when open */
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-image {
+    width: 30vw;
+    margin: 20px;
+}
+
+.faq-section {
+    background-color: #464a3b;
+    padding: 20px;
+    min-height: 30vh;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.heading-faq {
+    color: #021a4f;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #EDF4f2;
+    width: 18rem;
+    margin-bottom: 10px;
+    color: #464a3b;;
+    height: 45vh;
+}
+
+.card-row {
+    margin: 0px -5px;
+    padding-top: 25px;
+}
+
+.card-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-column {
+    float: left;
+    padding: 0 10px;
+}
+
+.card-title {
+    color: #021a4f;
+}
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    font-size: 16px;
+
+}
+
+@media screen and (max-width: 680px) {
+    .card-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Queries  for video*/ 
+
+@media screen and (max-width: 680px) {
+    .card-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
