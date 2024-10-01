@@ -16,6 +16,44 @@
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
 
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element is in view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for each card */
+.fade-in.card-1 {
+    transition-delay: 0.3s;
+}
+
+.fade-in.card-2 {
+    transition-delay: 0.6s;
+}
+
+.fade-in.card-3 {
+    transition-delay: 0.9s;
+}
+
+.fade-in.card-4 {
+    transition-delay: 1.2s;
+}
+
+.fade-in.card-5 {
+    transition-delay: 1.5s;
+}
+
+.fade-in.card-6 {
+    transition-delay: 1.8s;
+}
+
 
     
 
